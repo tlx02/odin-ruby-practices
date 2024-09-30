@@ -1,16 +1,14 @@
 def substrings(str, arr)
-  result = Hash.new
-  arr.each do | word |
+  result = {}
+  arr.each do |word|
     count = str.downcase.scan(/#{word.downcase}/).length
-    if count != 0
-      result[word] = count
-    end
+    result[word] = count if count != 0
   end
   result
 end
 
-dictionary = ["below","down","go","going","horn","how","howdy","it","i","low","own","part","partner","sit"]
-puts substrings("below", dictionary)
+dictionary = %w[below down go going horn how howdy it i low own part partner sit]
+puts substrings('below', dictionary)
 #  { "below" => 1, "low" => 1 }
 
 puts substrings("Howdy partner, sit down! How's it going?", dictionary)
