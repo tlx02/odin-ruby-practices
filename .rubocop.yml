@@ -9,3 +9,9 @@
 #
 # See https://docs.rubocop.org/rubocop/configuration
 require: rubocop-performance
+
+Style/StringLiterals:
+  EnforcedStyle: single_quotes
+
+Style/FrozenStringLiteralComment:
+  EnforcedStyle: never

@@ -5,13 +5,13 @@ def caesar_cipher(str, n)
   result = []
   str.chars.each do |char|
     if LOWER_CASE.include?(char)
-      newVal = char.ord + Integer(n)
-      newVal = newVal > 122 ? newVal - 122 + 96 : newVal
-      result << newVal.chr
+      new_val = char.ord + Integer(n)
+      new_val = new_val > 122 ? new_val - 122 + 96 : new_val
+      result << new_val.chr
     elsif UPPER_CASE.include?(char)
-      newVal = char.ord + Integer(n)
-      newVal = newVal > 90 ? newVal - 90 + 64 : newVal
-      result << newVal.chr
+      new_val = char.ord + Integer(n)
+      new_val = new_val > 90 ? new_val - 90 + 64 : new_val
+      result << new_val.chr
     else
       result << char
     end

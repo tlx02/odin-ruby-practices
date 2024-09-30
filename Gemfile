@@ -6,3 +6,5 @@ source 'https://rubygems.org'
 
 gem 'rubocop', '~> 1.66'
 gem 'rubocop-performance', require: false
+# gem "ruby-lsp"
+
